@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suhas P L| Developer Portfolio</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+/* BACKGROUND */
+
+body{
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:center;
+gap:30px;
+padding:20px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#6366f1,#06b6d4,#ec4899);
+background-size:400% 400%;
+animation:gradientMove 10s infinite;
+}
+
+@keyframes gradientMove{
+0%{background-position:0%}
+50%{background-position:100%}
+100%{background-position:0%}
+}
+
+.hero h1{
+font-size:60px;
+}
+
+.hero span{
+color:#ffe066;
+}
+
+.typing{
+margin-top:10px;
+font-size:22px;
+border-right:3px solid white;
+white-space:nowrap;
+overflow:hidden;
+width:0;
+animation:typing 4s steps(30,end) forwards,blink 1s infinite;
+}
+
+@keyframes typing{
+to{width:260px;}
+}
+
+@keyframes blink{
+50%{border-color:transparent;}
+}
+
+/* FLOATING SHAPES */
+
+.shape{
+position:absolute;
+border-radius:50%;
+background:rgba(255,255,255,0.1);
+animation:float 8s infinite ease-in-out;
+}
+
+.shape1{
+width:120px;
+height:120px;
+top:20%;
+left:10%;
+}
+
+.shape2{
+width:80px;
+height:80px;
+top:70%;
+right:10%;
+}
+
+.shape3{
+width:100px;
+height:100px;
+bottom:10%;
+left:30%;
+}
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-20px);}
+100%{transform:translateY(0px);}
+}
+
+/* SECTIONS */
+
+section{
+padding:80px 10%;
+}
+
+h2{
+margin-bottom:20px;
+}
+
+/* GLASS CARD */
+
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+border-radius:15px;
+padding:25px;
+backdrop-filter:blur(12px);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* SKILLS */
+
+.skill{
+margin:12px 0;
+}
+
+.bar{
+height:8px;
+background:#1e293b;
+border-radius:5px;
+margin-top:5px;
+}
+
+.progress{
+height:8px;
+border-radius:5px;
+background:linear-gradient(90deg,#6366f1,#06b6d4);
+}
+
+/* PROJECT GRID */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.project{
+padding:20px;
+border-radius:12px;
+background:rgba(255,255,255,0.05);
+transition:0.4s;
+}
+
+.project:hover{
+transform:scale(1.05);
+background:rgba(255,255,255,0.1);
+}
+
+/* BUTTON */
+
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:8px 16px;
+border-radius:20px;
+background:linear-gradient(45deg,#6366f1,#06b6d4);
+text-decoration:none;
+color:white;
+}
+
+/* CONTACT GRID */
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="shape shape1"></div>
+<div class="shape shape2"></div>
+<div class="shape shape3"></div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#github">GitHub</a>
+<a href="#resume">Resume</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<h1>Hi, I'm <span>Suhas P L</span></h1>
+
+<div class="typing">
+Software Developer
+</div>
+
+</div>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<div class="card">
+
+<p>
+Computer Science student passionate about software development,
+.
+</p>
+
+<br>
+
+<b>Education</b>
+<p>B.E / B.Tech – Computer Science,CGPA-8.7</p>
+<p>VTU University (2022–2026)</p>
+<p>PUC: VCVR, Davangere (91.6%)</p>
+<p>SSLC: BGS, Arsikere (87.3%)</p>
+<br>
+
+<b>Career Objective</b>
+
+<p>
+To become a professional developer building modern and secure software solutions.
+</p>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2>Technical Skills</h2>
+
+<div class="card">
+
+<div class="skill">
+Python
+<div class="bar"><div class="progress" style="width:85%"></div></div>
+</div>
+
+<div class="skill">
+SQL
+<div class="bar"><div class="progress" style="width:75%"></div></div>
+</div>
+
+<div class="skill">
+HTML/CSS
+<div class="bar"><div class="progress" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+JavaScript
+<div class="bar"><div class="progress" style="width:70%"></div></div>
+</div>
+
+<div class="skill">
+Django
+<div class="bar"><div class="progress" style="width:90%"></div></div>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>Blockchain Driven Security Enhancements in Modern Banking System</h3>
+<p>These approach leverages Cryptographic verification, Enhancing data Integrity accros the border payments.</p>
+<a class="btn" href="#">https://github.com/suhaspl1817-lab/Block-chain-driven-security-enhancements-in-modern-banking-system.</a>
+</div>
+
+<div class="project">
+<h3>Car Rental System</h3>
+<p>Allowing users to browse available cars, make reservations and manage bookings efficiently.</p>
+<a class="btn" href="#">https://github.com/suhaspl1817-lab/Car-rental-system-using-full-stack-development</a>
+</div>
+
+<div class="project">
+<h3>AI Repository System</h3>
+<p>Organised Management of Models and Faster Development of AI applications.</p>
+<a class="btn" href="#">GitHub Repo</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- GITHUB -->
+
+<section id="github">
+
+<h2>GitHub Profile</h2>
+
+<div class="card">
+
+<p>GitHub Profile:</p>
+<p>https://github.com/suhaspl1817-lab</p>
+
+<p><b>Highlighted Repositories</b></p>
+
+<ul>
+<li>Blockchain Driven Security Enhancements in Modern Banking System</li>
+<li>Car Rental System</li>
+<li>AI Repository System</li>
+</ul>
+
+</div>
+
+</section>
+
+<!-- RESUME -->
+
+<section id="resume">
+
+<h2>Resume</h2>
+
+<div class="card">
+
+<p>Download my resume</p>
+
+<a class="btn" href="resume.pdf">Download Resume</a>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<div class="contact-grid">
+
+<div class="card">
+Email<br>
+suhaspl1817@gmail.com
+</div>
+
+<div class="card">
+LinkedIn<br>
+linkedin.com/in/suhas-p-l-2b763b39b
+</div>
+
+<div class="card">
+Phone<br>
++91 9380563026
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Suhas P L| Developer Portfolio
+
+</footer>
+
+</body>
+</html>
